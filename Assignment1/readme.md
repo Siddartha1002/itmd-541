@@ -1,3 +1,3 @@
 # output
 ---
-[output](./images/output.png "output")
+![output](./images/output.png "output")
