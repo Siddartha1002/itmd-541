@@ -2,12 +2,10 @@
 
 #flex-section1 ul {
 	display: flex;                
-  	justify-content: center; 
-	gap : 50px;
+  	justify-content: space-evenly; 
   	padding: 0;                  
   	margin: 0;                    
   	list-style-type: none; 
-	box-sizing: border-box;
 }
 /* end Flexbox Part 1 */
 
@@ -17,26 +15,27 @@
 #flex-section2 ul {
 	list-style-type: none;
 	display: flex;
-	justify-content: space-between; 
 	padding: 0;                  
   	margin: 0; 
 }
 
 #flex-section2 li {
-	flex-grow: 1; 
-	width: 800px;
+	
 }
 
 #flex-section2 .item1 {
 	order : 1;
+	flex: 30px;
 }
 
 #flex-section2 .item2 {
 	order : 3;
+	flex: 30px;
 }
 
 #flex-section2 .item3 {
 	order : 2;
+	flex: 30px;
 }
 
 /* end Flexbox Part 2 */
@@ -65,11 +64,10 @@
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-	display: inline-grid;
-	grid-template-columns: auto auto auto auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px 100px;
 	gap: 20px;
-	height: 220px;
-	width: 690px;
 }
 
 /* end Grid Part 1 */
@@ -99,28 +97,24 @@
 #grid-section3 .grid {
 	display: grid;
 	gap: 10px;
-	
+	grid-template-rows: 100px 300px 100px;
 }
 
 #grid-section3 .box1 {
 	/* grid-row-start / grid-column-start / grid-row-end / grid-column-end. */
 	grid-area: 1 / 1 / span 1 / span 3;
-	height: 100px;
 }
 
 #grid-section3 .box2 {
 	grid-area: 2 / 1 / span 1 / span 2;
-	height: 300px;
 }
 
 #grid-section3 .box3 {
 	grid-area: 2 / 3 / span 1 / span 1;
-	height: 300px;
 }
 
 #grid-section3 .box4 {
 	grid-area: 3 / 1 / span 1 / span 3;
-	height: 100px;
 }
 
 /* end Grid Part 3 */
@@ -134,13 +128,14 @@
 	color: #000;
 	padding: 20px;
 	text-decoration: none;
-	transition: background-color 0.5s ease-in, color 0.5s ease-in;
+	transition-duration: 3s;
 }
 
 #transition-section .box a:hover {
 	background-color: #cc0000;
 	color: #fff;
-	transition: background-color 3s ease-out, color 3s ease-out;
+	text-decoration: none;
+	transition-duration: 0.5s;
 }
 
 /* end Transition Part */
